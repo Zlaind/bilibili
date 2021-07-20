@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Bilibili 简化，自定义 （自定义隐藏板块，推广和其他）
+// @name         Bilibili 简化，自定义
 // @namespace    http://zlayuan.com/
-// @version      1.0
+// @version      1.1.5
 // @description  功能介绍: 1. 自由编辑想要隐藏的板块; 2.优化掉推广板块; 3. 更多自定义;
 // @description  目前还只能在脚本中手动修改
 // @author       Zla
-// @match        http*://www.bilibili.com/
+// @match        http*://*.bilibili.com/*
 // @icon         data:image/jpg;base64,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
 // @require      https://cdn.bootcdn.net/ajax/libs/jquery/1.8.3/jquery.min.js
 // @grant        none
@@ -95,13 +95,13 @@
     // 不要修改这个下面的内容
     // Do not edit anything below.
     //----------------------------------------------------------------------//
-    var categoryName=["bili_live","bili_douga","bili_anime","bili_guochuang",
-                      "bili_manga","bili_music","bili_dance","bili_game",
-                      "bili_knowledge","bili_cheese","bili_tech","bili_sports",
-                      "bili_car","bili_life","bili_food","bili_animal",
-                      "bili_kichiku","bili_fashion","bili_information",
-                      "bili_ent","bili_read","bili_movie","bili_teleplay",
-                      "bili_cinephile","bili_documentary"];
+    var categoryName=["live","douga","anime","guochuang",
+                      "manga","music","dance","game",
+                      "knowledge","cheese","tech","sports",
+                      "car","life","food","animal",
+                      "kichiku","fashion","information",
+                      "ent","read","movie","teleplay",
+                      "cinephile","documentary"];
 
 
     function removeElement(name,commandList,type){
@@ -119,7 +119,7 @@
         var i=0;
         commandList.forEach((value,key)=>{
             if(value){
-                document.getElementById(name[i]).style.display = "none";
+                document.getElementById("bili_"+name[i]).style.display = "none";
             }
             i++;
         });
@@ -136,42 +136,99 @@
         });
     }
 
-    window.onload=function(){
-        removeCategory(categoryName,category);
-        //TODO: 暂时移除list-box,无法正确显示
-        removeListBox("list-box",category,HTMLDivElement);
+    function removeElementbyTag(lst,commandList,type){
+        var i=0
+        commandList.forEach((value,key)=>{
+            if(value && lst.childNodes[i] instanceof type){
+                lst.childNodes[i].style.display = "none";
+            }
+            i++;
+        });
+    }
+
+    //------------------------------------------------------------
+
+
+    function basic(){
         //左上角
         removeElement("nav-link-ul",topLeft,HTMLLIElement);
-        //头像侧
-        removeElement("user-con signin",topRight,HTMLDivElement);
-        //banner 下面左边
-        removeElement("con",underBannerLeft,HTMLLIElement);
-        //banner 下面右边
-        removeElement("friendship-link report-wrap-module",underBannerRight,HTMLSpanElement);
-
-
-        if(help){
-            document.getElementsByClassName("contact-help")[0].style.display = "none";
-        }
-        if(ad){
-            document.getElementById("reportFirst2").style.display = "none";
-            document.getElementById("reportFirst3").style.display = "none";
-            document.getElementById("bili_report_spe_rec").style.display = "none";
-        }
-        if(footer){
-            document.getElementsByClassName("international-footer")[0].style.display = "none";
-        }
-
-        if(recommand){
-            document.getElementsByClassName("space-between")[0].style.display = "none";
-        }
-
         if(upload){
             document.getElementsByClassName("mini-upload van-popover__reference")[0].style.display = "none";
-
         }
+
+        var loginCheck= document.getElementsByClassName("user-con");
+        //
+        //style.paddingRight="70px";
+        removeElementbyTag(loginCheck[1],topRight,HTMLDivElement);
     };
 
+
+    var homelFilter= "https://www.bilibili.com/";
+    var viodeFilter="https://www.bilibili.com/video/";
+
+    var channelFilter="https://www.bilibili.com/v/"
+
+    var spacelFilter="https://space.bilibili.com/"
+
+
+    //主页
+    if(location.href.length==homelFilter.length){
+        window.onload=function(){
+            basic();
+            removeCategory(categoryName,category);
+            //TODO: 暂时移除list-box,无法正确显示
+            removeListBox("list-box",category,HTMLDivElement);
+            //banner 下面左边
+            removeElement("con",underBannerLeft,HTMLLIElement);
+            //banner 下面右边
+            removeElement("friendship-link report-wrap-module",underBannerRight,HTMLSpanElement);
+
+            if(help){
+                document.getElementsByClassName("contact-help")[0].style.display = "none";
+            }
+            if(footer){
+                document.getElementsByClassName("international-footer")[0].style.display = "none";
+            }
+
+            if(recommand){
+                document.getElementsByClassName("space-between")[0].style.display = "none";
+            }
+            if(ad){
+                document.getElementById("reportFirst2").style.display = "none";
+                if(document.getElementById("reportFirst3")!=null){
+                    document.getElementById("reportFirst3").style.display = "none";
+                }
+                document.getElementById("bili_report_spe_rec").style.display = "none";
+            }
+        };
+    }
+    //视频内
+    else if(location.href.substring(0,viodeFilter.length)==viodeFilter){
+        window.onload=function(){
+            basic();
+            //为什么不行_(:< _)_
+        };
+    }
+
+    // 频道内
+    else if(location.href.substring(0,channelFilter.length)==channelFilter || categoryName.includes(location.href.substring(homelFilter.length).slice(0,-1))){
+        window.onload=function(){
+            basic();
+            //banner 下面左边
+            removeElement("con",underBannerLeft,HTMLLIElement);
+            //banner 下面右边
+            removeElement("friendship-link report-wrap-module",underBannerRight,HTMLSpanElement);
+            if(footer){
+                document.getElementsByClassName("international-footer")[0].style.display = "none";
+            }
+        };
+    }
+    //空间
+    else if(location.href.substring(0,spacelFilter.length)==spacelFilter){
+        window.onload=function(){
+            basic();
+        };
+    }
 
 
 })();
